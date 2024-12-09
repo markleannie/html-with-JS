@@ -1,0 +1,51 @@
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Optional: Set a max width for better control */
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ccc; /* Optional: Add a border for better visibility */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.slider img {
+    width: 100%;
+    display: none; /* Hide all images initially */
+}
+
+img.displaySlide {
+    display: block; /* Show the active slide */
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Add padding for better click area */
+    border-radius: 5px; /* Optional: Rounded button corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.prev {
+    left: 10px; /* Adjusted for better spacing */
+}
+
+.next {
+    right: 10px; /* Adjusted for better spacing */
+}
+
+@keyframes fade {
+    from { opacity: 0; } /* Start from transparent */
+    to { opacity: 1; } /* Fade to fully visible */
+}
